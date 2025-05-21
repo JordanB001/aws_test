@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+buildspec.yml
+cfn-ci-cd.yml
+cnf-iam-roles.yml
+deploy-cicd.sh
