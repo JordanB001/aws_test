@@ -6,7 +6,7 @@ Resources:
   CodeBuildRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: codebuild-immoloc-role
+      RoleName: codebuild-awsdemo-role
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -32,7 +32,7 @@ Resources:
   CodePipelineRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: codepipeline-immoloc-role
+      RoleName: codepipeline-awsdemo-role
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:

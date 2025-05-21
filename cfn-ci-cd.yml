@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: CI/CD Pipeline pour immoloc-front
+Description: CI/CD Pipeline pour awsdemo-front
 
 Parameters:
   GitHubRepo:
@@ -22,7 +22,7 @@ Resources:
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
-      Name: immoloc-front-build
+      Name: awsdemo-front-build
       ServiceRole: !Ref CodeBuildRoleArn
       Source:
         Type: CODEPIPELINE

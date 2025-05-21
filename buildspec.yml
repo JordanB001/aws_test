@@ -8,9 +8,9 @@ phases:
       - npm install
   build:
     commands:
-      - ng build --configuration production
+      - npm run build
 
 artifacts:
-  base-directory: dist/immoloc-front
+  base-directory: build
   files:
     - '**/*'
