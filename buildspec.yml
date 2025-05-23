@@ -9,6 +9,8 @@ phases:
       - npm install
   build:
     commands:
+      - echo "Adding node_modules/.bin to PATH"
+      - export PATH=$PWD/node_modules/.bin:$PATH
       - echo "Building project..."
       - npm run build
 artifacts:
