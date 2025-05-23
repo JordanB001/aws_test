@@ -1,21 +1,25 @@
 version: 0.2
 
+env:
+  variables:
+    DIST_DIR: dist
+
 phases:
   install:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies..."
-      - npm install
+      - echo Installing dependencies...
+      - yarn install
   build:
     commands:
-      - echo "Adding node_modules/.bin to PATH"
-      - export PATH=$PWD/node_modules/.bin:$PATH
-      - echo "Building project..."
-      - node -v
-      - npm run build
+      - echo Building the frontend...
+      - yarn run build
+  post_build:
+    commands:
+      - echo Invalidating CloudFront cache...
 
 artifacts:
   files:
     - '**/*'
-  base-directory: dist
+  base-directory: $DIST_DIR
