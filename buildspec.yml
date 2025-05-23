@@ -12,6 +12,7 @@ phases:
       - echo "Adding node_modules/.bin to PATH"
       - export PATH=$PWD/node_modules/.bin:$PATH
       - echo "Building project..."
+      - node -v
       - npm run build
 
 artifacts:
