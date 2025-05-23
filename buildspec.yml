@@ -8,11 +8,14 @@ phases:
       - echo "Installing dependencies..."
       - npm install
   build:
-    commands:
-      - echo "Adding node_modules/.bin to PATH"
-      - export PATH=$PWD/node_modules/.bin:$PATH
-      - echo "Building project..."
-      - npm run build
+  commands:
+    - echo "📦 package.json contents:"
+    - cat package.json
+    - echo "📁 Contents of node_modules/.bin:"
+    - ls -la node_modules/.bin
+    - echo "Building project..."
+    - npm run build
+
 artifacts:
   files:
     - '**/*'
