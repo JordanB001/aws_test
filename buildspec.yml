@@ -5,13 +5,13 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - echo "Installing dependencies..."
       - npm install
-      - npm install --save-dev vite
   build:
     commands:
+      - echo "Building project..."
       - npm run build
-
 artifacts:
-  base-directory: dist
   files:
     - '**/*'
+  base-directory: dist
